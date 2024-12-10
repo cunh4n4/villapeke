@@ -1,0 +1,94 @@
+html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guardería Villa Peke, un lugar seguro y divertido para nuestros pequeños.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Villa Peke - Guardería</title>
+</head>
+<body>
+    <!-- Video de fondo en el body -->
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="../videos/video.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>
+
+    <!-- Sección de encabezado con el logo y nombre de la guardería -->
+    <div class="video-header">
+        <div class="video-overlay">
+            <img src="../images/logo.jpg" alt="Logo de Villa Peke" class="logo-overlay">
+            <h1 class="guarderia-name">Villa Peke</h1>
+        </div>
+    </div>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="header-video">
+            <video autoplay loop muted>
+                <source src="../videos/fondo.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="overlay">
+                <h1 class="welcome-title">¡Aqui nuestra casa!</h1>
+                <p class="description">Un lugar donde, jugar y aprender es todo una diversión.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú de navegación -->
+     <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pag/que-hacemos.html">Nosotros</a></li>
+            <li><a href="../pag/espacios.html">Espacios</a></li>
+            <li><a href="../pag/novedades.html">Novedades</a></li>
+            <li><a href="../pag/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+  <!-- Sección: Espacios -->
+<section class="gallery">
+    <h2 class="section-title">Conoce Nuestros Espacios</h2>
+    <div class="slider">
+        <div class="slide">
+            <img src="../images/clase.jpg" alt="Clase" class="gallery-image" onclick="openModal(this)">
+        </div>
+        <div class="slide">
+            <img src="../images/comedor.jpg" alt="Comedor" class="gallery-image" onclick="openModal(this)">
+        </div>
+        <div class="slide">
+            <img src="../images/dormitorio.jpg" alt="Dormitorio" class="gallery-image" onclick="openModal(this)">
+        </div>
+        <div class="slide">
+            <img src="../images/espacios1.jpg" alt="Espacios" class="gallery-image" onclick="openModal(this)">
+        </div>
+        <div class="slide">
+            <img src="../images/espacio1.jpg" alt="Espacios Jugar" class="gallery-image" onclick="openModal(this)">
+        </div>
+    </div>
+    <p>En Villa Peke, contamos con espacios diseñados especialmente para el desarrollo y bienestar de los niños. Nuestras aulas están equipadas con materiales educativos y juegos que fomentan la creatividad y el aprendizaje. Además, tenemos áreas al aire libre donde los niños pueden jugar y explorar en un ambiente seguro y divertido.</p>
+</section>
+
+<!-- Modal para mostrar imágenes ampliadas -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+</div>
+
+
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Dirección: Calle La Paz, Teruel, España | Teléfono: 637148586</p>
+        <p>Síguenos en nuestras redes sociales:</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

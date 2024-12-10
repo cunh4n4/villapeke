@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guardería Villa Peke: un lugar de aprendizaje y diversión para los más pequeños.">
+    <title>Villa Peke - Guardería</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/scripts.js"></script>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pag/que-hacemos.html">Nosotros</a></li>
+            <li><a href="pag/espacios.html">Espacios</a></li>
+            <li><a href="pag/novedades.html">Novedades</a></li>
+            <li><a href="pag/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Encabezado con video de fondo -->
+    <header class="header-video">
+        <video autoplay muted loop>
+            <source src="videos/video.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+        <div class="header-content">
+            <h1 class="rainbow-text">¡Bienvenidos a Villa Peke!</h1>
+            <p class="pastel-text">Donde los pequeños descubren, aprenden y se divierten en un entorno lleno de amor y seguridad.</p>
+        </div>
+    </header>
+
+    <!-- Sección de rectángulos -->
+    <section class="info-section">
+        <div class="rectangle" style="background-color: #ffebee;">Ambiente seguro y amigable</div>
+        <div class="rectangle" style="background-color: #e3f2fd;">Actividades creativas</div>
+        <div class="rectangle" style="background-color: #e8f5e9;">Cuidado personalizado</div>
+    </section>
+
+    <!-- Sección de personal -->
+    <section class="personal-section">
+        <h2><a href="pag/que-hacemos.html">Nuestro Personal</a></h2>
+        <div class="personal-container">
+            <div class="personal-card">
+                <img src="images/personal.jpg" alt="Personal 1">
+                <p>Educadora infantil con amplia experiencia.</p>
+            </div>
+            <div class="personal-card">
+                <img src="images/personal_1.jpg" alt="Personal 2">
+                <p>Especialista en actividades creativas.</p>
+            </div>
+            <div class="personal-card">
+                <img src="images/personal_2.jpg" alt="Personal 3">
+                <p>Asistente de cuidado y apoyo emocional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de espacios -->
+    <section class="gallery-section">
+        <h2><a href="pag/espacios.html">Conoce nuestros espacios</a></h2>
+        <div class="slider-container">
+            <img src="images/clase.jpg" alt="Clase">
+            <img src="images/comedor.jpg" alt="Comedor">
+            <img src="images/dormitorio.jpg" alt="Dormitorio">
+            <img src="images/espacios1.jpg" alt="Espacios exteriores">
+        </div>
+    </section>
+
+    <!-- Sección de novedades -->
+    <section class="news-section">
+        <h2><a href="pag/novedades.html">Novedades</a></h2>
+        <div class="news-grid">
+            <div class="news-item">
+                <img src="images/programa.jpg" alt="Programa">
+                <p>Nuestro nuevo programa educativo.</p>
+            </div>
+            <div class="news-item">
+                <img src="images/taller.jpg" alt="Taller">
+                <p>Taller creativo: Manualidades de verano.</p>
+            </div>
+            <div class="news-item">
+                <img src="images/jornada.jpg" alt="Jornada">
+                <p>Jornada de puertas abiertas: 15 de junio.</p>
+            </div>
+            <div class="news-item">
+                <img src="images/diversion.jpg" alt="Diversión">
+                <p>Fiesta temática: Día de disfraces.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>Villa Peke, Calle la Paz, Teruel, España</p>
+        <p>Teléfono: 637148586</p>
+        <p>Síguenos en redes sociales</p>
+    </footer>
+</body>
+</html>

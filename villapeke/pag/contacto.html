@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guardería Villa Peke, un lugar seguro y divertido para nuestros pequeños.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Contacto - Villa Peke</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Estilos para el formulario de contacto */
+        .contact-form {
+            background: linear-gradient(to right, blue, yellow, red, lime);
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .contact-form h2 {
+            text-align: center;
+        }
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact-form button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .contact-form button:hover {
+            background-color: darkblue;
+        }
+
+        /* Estilos para la sección de blog */
+        .blog-section {
+            background-color: black;
+            color: darkblue;
+            padding: 20px;
+            max-width: 800px;
+            margin: 50px auto;
+            border-radius: 10px;
+            text-align: justify;
+        }
+        .blog-section h3 {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="header-video">
+            <video autoplay loop muted>
+                <source src="../videos/fondo.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="overlay">
+                <h1 class="welcome-title">¡Contacto!</h1>
+                <p class="description">Aqui podras ponerte en contacto con nosotras.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pag/que-hacemos.html">Nosotros</a></li>
+            <li><a href="../pag/espacios.html">Espacios</a></li>
+            <li><a href="../pag/novedades.html">Novedades</a></li>
+            <li><a href="../pag/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Contacto -->
+    <section class="contact">
+        <div class="contact-form">
+            <h2>Formulario de Contacto</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+                <textarea name="message" placeholder="Tu Mensaje" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección de Blog -->
+    <section class="blog-section">
+        <h3>Deja tu Mensaje</h3>
+        <p>Comparte tus pensamientos, sugerencias o experiencias. Nos encantaría saber de ti.</p>
+        <textarea placeholder="Escribe tu mensaje aquí..." rows="5"></textarea>
+        <button type="submit">Publicar Mensaje</button>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Dirección: Calle La Paz, Teruel, España | Teléfono: 637148586</p>
+        <p>Síguenos en nuestras redes sociales:</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const contactForm = document.querySelector('.contact-form form');
+            const blogButton = document.querySelector('.blog-section button');
+
+            // Manejar el envío del formulario de contacto
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevenir el envío del formulario
+                
+                // Aquí puedes añadir la lógica para enviar los datos al servidor
+                alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
+                
+                // Restablecer el formulario
+                contactForm.reset();
+            });
+
+            // Manejar la publicación del mensaje en el blog
+            blogButton.addEventListener('click', function() {
+                const messageText = document.querySelector('.blog-section textarea').value;
+
+                if (messageText) {
+                    alert('Tu mensaje ha sido publicado: ' + messageText);
+                    // Aquí puedes añadir la lógica para almacenar el mensaje en el servidor
+                    document.querySelector('.blog-section textarea').value = ''; // Limpiar el área de texto
+                } else {
+                    alert('Por favor, escribe un mensaje antes de publicar.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
