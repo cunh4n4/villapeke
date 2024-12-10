@@ -6,65 +6,24 @@
     <meta name="description" content="Guardería Villa Peke, un lugar seguro y divertido para nuestros pequeños.">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Contacto - Villa Peke</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        /* Estilos para el formulario de contacto */
-        .contact-form {
-            background: linear-gradient(to right, blue, yellow, red, lime);
-            border-radius: 15px;
-            padding: 20px;
-            max-width: 600px;
-            margin: 50px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .contact-form h2 {
-            text-align: center;
-        }
-        .contact-form input, 
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .contact-form button {
-            background-color: blue;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-        }
-        .contact-form button:hover {
-            background-color: darkblue;
-        }
-
-        /* Estilos para la sección de blog */
-        .blog-section {
-            background-color: black;
-            color: darkblue;
-            padding: 20px;
-            max-width: 800px;
-            margin: 50px auto;
-            border-radius: 10px;
-            text-align: justify;
-        }
-        .blog-section h3 {
-            text-align: center;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
+    <!-- Video de fondo en el body -->
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="../videos/video.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>
+
+    <!-- Sección de encabezado con el logo y nombre de la guardería -->
+    <div class="video-header">
+        <div class="video-overlay">
+            <img src="../images/logo.jpg" alt="Logo de Villa Peke" class="logo-overlay">
+            <h1 class="guarderia-name">Villa Peke</h1>
+        </div>
+    </div>
+
     <!-- Encabezado -->
     <header>
         <div class="header-video">
@@ -80,21 +39,20 @@
     </header>
 
     <!-- Menú de navegación -->
-   <nav>
-    <div class=”menu-toggle” id=”mobile-menu”>
-        <span class=”bar”></span>
-        <span class=”bar”></span>
-        <span class=”bar”></span>
-    </div>
-    <ul class=”nav-list”>
-        <li><a href=”../index.html”>Inicio</a></li>
-        <li><a href=”../pag/que-hacemos.html”>Nosotros</a></li>
-        <li><a href=”../pag/espacios.html”>Espacios</a></li>
-        <li><a href=”../pag/novedades.html”>Novedades</a></li>
-        <li><a href=”../pag/contacto.html”>Contacto</a></li>
-    </ul>
-</nav>
-
+    <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pag/que-hacemos.html">Nosotros</a></li>
+            <li><a href="../pag/espacios.html">Espacios</a></li>
+            <li><a href="../pag/novedades.html">Novedades</a></li>
+            <li><a href="../pag/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
 
     <!-- Sección de Contacto -->
     <section class="contact">
@@ -132,10 +90,10 @@
             // Manejar el envío del formulario de contacto
             contactForm.addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevenir el envío del formulario
-                
+
                 // Aquí puedes añadir la lógica para enviar los datos al servidor
                 alert('Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.');
-                
+
                 // Restablecer el formulario
                 contactForm.reset();
             });
@@ -156,4 +114,8 @@
     </script>
 </body>
 </html>
+```
 
+Estos son los códigos HTML de las páginas de novedades.html y contacto.html. Ambas páginas siguen la misma estructura y diseño que la página de inicio (index.html), con algunas diferencias en el contenido y la sección principal.
+
+Si necesitas alguna aclaración o tienes más preguntas, no dudes en consultarme.
