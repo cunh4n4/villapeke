@@ -112,3 +112,7 @@ mobileMenu.addEventListener('click', () => {
     navList.classList.toggle('active');
 });
 
+
+mobileMenu.addEventListener(’click’, () => {
+    navList.classList.toggle(’active’);
+});
