@@ -336,7 +336,7 @@ nav a:hover {
     object-fit: cover; /* Hace que el video cubra toda la pantalla sin distorsionarse */
 }
 
-/* Sección: Novedades */
+/*/* Sección: Novedades */
 .news {
     position: relative; /* Necesario para el pseudo-elemento */
     padding: 20px 5%; /* Margen del 5% */
@@ -418,7 +418,7 @@ nav a:hover {
     width: 100%; /* Asegura que las imágenes ocupen el 100% del contenedor */
     height: auto;
     border-radius: 10px;
-}
+}*/
 
 /* Pie de página */
 footer {
