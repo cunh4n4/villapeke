@@ -100,6 +100,26 @@ header h1 {
 header p {
     font-size: 1.2rem;
 }
+/* Fondo de video en el body */
+.video-background {
+    position: fixed; /* Asegura que el video cubra toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca el video detrás de todos los elementos */
+    object-fit: cover; /* Hace que el video cubra toda la pantalla sin distorsionarse */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .video-background {
+        object-fit: contain; /* Asegura que todo el contenido del video sea visible */
+        height: 100vh; /* Ajusta la altura del video al 100% del viewport */
+        width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
+    }
+}
+
 
 /* Menú */
 /* Menú adaptable */
@@ -324,19 +344,6 @@ nav a:hover {
 .slide img:hover {
     transform: scale(1.1);
 }
-
-/* Fondo de video en el body */
-.video-background {
-    position: fixed; /* Asegura que el video cubra toda la pantalla */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Coloca el video detrás de todos los elementos */
-    object-fit: cover; /* Hace que el video cubra toda la pantalla sin distorsionarse */
-}
-
-
 
 /* Pie de página */
 footer {
