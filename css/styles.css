@@ -120,10 +120,102 @@ header p {
     }
 }
 
+/* Menú adaptable */
+nav {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #ff9999, #ffcc99, #ccff99, #99ccff, #ff99cc);
+    padding: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Asegura que el botón y el menú se ubiquen correctamente */
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu a:hover {
+    transform: scale(1.1);
+    background-color: yellow;
+    border-radius: 0;
+}
+
+/* Botón de menú en pantallas pequeñas */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Oculta el menú por defecto */
+        flex-direction: column; /* Cambia a orientación vertical */
+        position: absolute;
+        top: 60px; /* Ajusta según la altura del botón */
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, #ff9999, #ffcc99, #ccff99, #99ccff, #ff99cc);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón de menú en pantallas pequeñas */
+    }
+
+    nav:hover .menu {
+        display: flex; /* Muestra el menú al pasar el ratón sobre el nav */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
 
 /* Menú */
 /* Menú adaptable */
-nav {
+/*nav {
     position: sticky;
     top: 0;
     background: linear-gradient(to right, #ff9999, #ffcc99, #ccff99, #99ccff, #ff99cc);
@@ -183,7 +275,7 @@ nav a:hover {
         font-size: 1rem;
         padding: 8px 16px;
     }
-}
+}*/
 /* CSS para la sección de bienvenida */
 /* CSS para la sección de bienvenida */
 .welcome {
@@ -646,3 +738,4 @@ footer {
     color: white; /* Color del texto */
     padding: 10px 0;
 }
+
