@@ -44,6 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
             item.style.borderRadius = "50%"; // Restaurar forma de nube
         });
     });
+    document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", () => {
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    });
+})
+        ;
 
     // Centrar títulos en todas las secciones
     const titles = document.querySelectorAll("h2");
