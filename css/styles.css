@@ -133,7 +133,7 @@ header p {
 }
 
 
-/* Menú adaptable */
+/* Estilos para el menú */
 nav {
     position: sticky;
     top: 0;
@@ -141,14 +141,13 @@ nav {
     padding: 10px;
     z-index: 1000;
     display: flex;
-    justify-content: space-between; /* Asegura que el botón y el menú se ubiquen correctamente */
+    justify-content: space-between; /* Distribuye elementos horizontalmente */
     align-items: center;
 }
 
 .menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex; /* Muestra los elementos en una fila por defecto */
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -176,9 +175,9 @@ nav {
     border-radius: 0;
 }
 
-/* Botón de menú en pantallas pequeñas */
+/* Botón de menú (oculto en pantallas grandes) */
 .menu-toggle {
-    display: none;
+    display: none; /* Oculta el botón en pantallas grandes */
     background: none;
     border: none;
     font-size: 2rem;
@@ -186,10 +185,10 @@ nav {
     color: black;
 }
 
-/* Media Queries para diseño responsivo */
+/* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
     .menu {
-        display: none; /* Oculta el menú por defecto */
+        display: none; /* Oculta el menú inicialmente */
         flex-direction: column; /* Cambia a orientación vertical */
         position: absolute;
         top: 60px; /* Ajusta según la altura del botón */
@@ -211,11 +210,12 @@ nav {
     }
 
     .menu-toggle {
-        display: block; /* Muestra el botón de menú en pantallas pequeñas */
+        display: block; /* Muestra el botón de menú */
     }
 
-    nav:hover .menu {
-        display: flex; /* Muestra el menú al pasar el ratón sobre el nav */
+    /* Clase activa para mostrar el menú */
+    .menu.active {
+        display: flex;
     }
 }
 
@@ -226,70 +226,6 @@ nav {
     }
 }
 
-/* Menú */
-/* Menú adaptable */
-nav {
-    position: sticky;
-    top: 0;
-    background: linear-gradient(to right, #ff9999, #ffcc99, #ccff99, #99ccff, #ff99cc);
-    padding: 10px;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Permite que el menú se ajuste en pantallas pequeñas */
-}
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-nav li {
-    margin: 0 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background: linear-gradient(to right, #ffffff, #f0f0f0);
-    border-radius: 50%;
-    padding: 10px 20px;
-    transition: transform 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-nav a:hover {
-    transform: scale(1.1);
-    background-color: yellow;
-    border-radius: 0;
-}
-
-/* Media Queries para diseño responsivo */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Cambia a vertical en pantallas pequeñas */
-        align-items: center;
-    }
-
-    nav li {
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    nav a {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-}
-/* CSS para la sección de bienvenida */
 /* CSS para la sección de bienvenida */
 .welcome {
     background-color: #f9f9f9; /* Fondo suave */
