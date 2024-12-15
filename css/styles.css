@@ -7,16 +7,6 @@ body {
     overflow-x: hidden;
     background: black;
 }
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
-    overflow-y: auto;  /* Asegura que haya desplazamiento vertical */
-}
-
-
 
 video {
     width: 100%;
