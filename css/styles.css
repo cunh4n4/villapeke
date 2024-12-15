@@ -215,7 +215,7 @@ nav {
 
 /* Menú */
 /* Menú adaptable */
-/*nav {
+nav {
     position: sticky;
     top: 0;
     background: linear-gradient(to right, #ff9999, #ffcc99, #ccff99, #99ccff, #ff99cc);
@@ -275,7 +275,7 @@ nav a:hover {
         font-size: 1rem;
         padding: 8px 16px;
     }
-}*/
+}
 /* CSS para la sección de bienvenida */
 /* CSS para la sección de bienvenida */
 .welcome {
