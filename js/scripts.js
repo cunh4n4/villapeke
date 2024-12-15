@@ -28,6 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
         console.warn("No se encontró el contenedor del slider.");
     }
 
+    // Menú adaptable: mostrar/ocultar en pantallas pequeñas
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("active"); // Alternar la clase activa para mostrar/ocultar el menú
+        });
+    }
+
     // Animaciones hover en los elementos del menú
     const menuItems = document.querySelectorAll("nav ul li a");
 
@@ -44,15 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
             item.style.borderRadius = "50%"; // Restaurar forma de nube
         });
     });
-    document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
-
-    menuToggle.addEventListener("click", () => {
-        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-    });
-})
-        ;
 
     // Centrar títulos en todas las secciones
     const titles = document.querySelectorAll("h2");
@@ -99,18 +100,20 @@ document.addEventListener("DOMContentLoaded", () => {
             item.style.boxShadow = "3px 3px 10px rgba(0, 0, 0, 0.1)";
         });
     });
+
+    // Modal para imágenes
+    window.openModal = function(img) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const captionText = document.getElementById("caption");
+
+        modal.style.display = "block"; // Mostrar el modal
+        modalImg.src = img.src; // Establecer la imagen del modal
+        captionText.innerHTML = img.alt; // Establecer texto alternativo como título
+    };
+
+    window.closeModal = function() {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none"; // Ocultar el modal
+    };
 });
-function openModal(img) {
-    var modal = document.getElementById("imageModal");
-    var modalImg = document.getElementById("modalImage");
-    var captionText = document.getElementById("caption");
-
-    modal.style.display = "block"; // Mostrar el modal
-    modalImg.src = img.src; // Establecer la imagen del modal
-    captionText.innerHTML = img.alt; // Establecer texto alternativo como título
-}
-
-function closeModal() {
-    var modal = document.getElementById("imageModal");
-    modal.style.display = "none"; // Ocultar el modal
-}
