@@ -114,7 +114,7 @@ header p {
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .video-background {
-        object-fit: contain; /* Asegura que todo el contenido del video sea visible */
+        object-fit: cover; /* Asegura que todo el contenido del video sea visible */
         height: 100vh; /* Ajusta la altura del video al 100% del viewport */
         width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
     }
