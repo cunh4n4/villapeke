@@ -7,6 +7,14 @@ body {
     overflow-x: hidden;
     background: black;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Previene el desplazamiento innecesario */
+    height: 100%;
+    width: 100%;
+}
+
 
 video {
     width: 100%;
@@ -109,16 +117,21 @@ header p {
     height: 100%;
     z-index: -1; /* Coloca el video detrás de todos los elementos */
     object-fit: cover; /* Hace que el video cubra toda la pantalla sin distorsionarse */
+    object-position: center; /* Centra el video en su contenedor */
+    background-color: #000; /* Fondo de respaldo para pantallas que no soporten video */
+    overflow: hidden;
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .video-background {
-        object-fit: cover; /* Asegura que todo el contenido del video sea visible */
-        height: 100vh; /* Ajusta la altura del video al 100% del viewport */
+        position: absolute; /* Cambia a absolute para prevenir conflictos en dispositivos móviles */
         width: 100vw; /* Asegura que ocupe todo el ancho del viewport */
+        height: 100vh; /* Ajusta la altura del video al 100% del viewport */
+        object-fit: fill; /* Alternativa a cover en caso de distorsión */
     }
 }
+
 
 /* Menú adaptable */
 nav {
