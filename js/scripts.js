@@ -127,3 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "none"; // Ocultar el modal
     };
 });
+    const videoBackground = document.querySelector(".video-background");
+    if (videoBackground) {
+        const resizeVideo = () => {
+            videoBackground.style.height = `${window.innerHeight}px`;
+            videoBackground.style.width = `${window.innerWidth}px`;
+        };
+        window.addEventListener("resize", resizeVideo);
+        resizeVideo(); // Ajustar al cargar
+    }
+});
