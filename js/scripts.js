@@ -27,6 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         console.warn("No se encontró el contenedor del slider.");
     }
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("nav ul");
+
+    if (menuToggle && menu) {
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("active"); // Alternar clase `active`
+        });
+    }
+});
 
     // Menú adaptable: mostrar/ocultar en pantallas pequeñas
     const menuToggle = document.querySelector(".menu-toggle");
